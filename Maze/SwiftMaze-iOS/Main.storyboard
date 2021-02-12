@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="SwiftMaze_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="maK-i9-Uhn"/>
+                        <viewControllerLayoutGuide type="bottom" id="khH-OB-KpY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="oBC-NY-OWd" appends="YES" id="aec-sx-TBx"/>
+                            <outletCollection property="gestureRecognizers" destination="z31-lt-UDP" appends="YES" id="jqF-bf-wOY"/>
+                            <outletCollection property="gestureRecognizers" destination="eEZ-KI-2a4" appends="YES" id="PLW-DY-6Je"/>
+                            <outletCollection property="gestureRecognizers" destination="qFL-Gh-XGf" appends="YES" id="1jT-e1-Y7G"/>
+                            <outletCollection property="gestureRecognizers" destination="gNf-RS-YcY" appends="YES" id="7gk-f5-JUN"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="skView" destination="3se-qz-xqx" id="tEH-4G-KYL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="oBC-NY-OWd">
+                    <connections>
+                        <action selector="tap:" destination="BV1-FR-VrT" id="pcN-LR-IOa"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="z31-lt-UDP" userLabel="Swipe Right Gesture Recognizer">
+                    <connections>
+                        <action selector="swipeRight:" destination="BV1-FR-VrT" id="VBs-pj-WYD"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="eEZ-KI-2a4" userLabel="Swipe Up Gesture Recognizer">
+                    <connections>
+                        <action selector="swipeUp:" destination="BV1-FR-VrT" id="Fcj-E5-Mpx"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="qFL-Gh-XGf" userLabel="Swipe Left Gesture Recognizer">
+                    <connections>
+                        <action selector="swipeLeft:" destination="BV1-FR-VrT" id="Nbu-9D-96a"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="gNf-RS-YcY" userLabel="Swipe Down Gesture Recognizer">
+                    <connections>
+                        <action selector="swipeDown:" destination="BV1-FR-VrT" id="Zvo-SY-IcG"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-16" y="-21"/>
+        </scene>
+    </scenes>
+</document>
